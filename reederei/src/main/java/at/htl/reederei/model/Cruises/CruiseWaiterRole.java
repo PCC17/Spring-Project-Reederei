@@ -1,5 +1,6 @@
-package at.htl.reederei.model.Employee;
+package at.htl.reederei.model.Cruises;
 
+import at.htl.reederei.model.Enum.EWaiterRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,7 +11,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Kreuzfahrt_Service_Rolle")
 @Entity
 @NoArgsConstructor
 public class CruiseWaiterRole implements Serializable
@@ -20,6 +21,7 @@ public class CruiseWaiterRole implements Serializable
         @NotNull
         private CruiseWaiterRoleID cruiseWaiterRoleID;
 
+        @Enumerated(EnumType.STRING)
         @Column
         private EWaiterRole role;
 }

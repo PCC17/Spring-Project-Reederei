@@ -1,19 +1,18 @@
 package at.htl.reederei.model.Employee;
 
+import at.htl.reederei.model.Cruises.CruiseOfficerRole;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Offizier")
 @Entity
 
 public class Officer extends AEmployee {
 
-    @ManyToMany
-    @JoinTable
-    private List<CruiseOfficerRole> cruiseOfficerRoles;
+    @Column
+    private CruiseOfficerRole cruiseOfficerRoles;
 }

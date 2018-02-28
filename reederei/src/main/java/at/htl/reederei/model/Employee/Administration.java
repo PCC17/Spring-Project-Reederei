@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Verwaltung")
 @Entity
 public class Administration extends AEmployee {
 }

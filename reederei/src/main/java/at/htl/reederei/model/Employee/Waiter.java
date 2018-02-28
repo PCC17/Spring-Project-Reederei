@@ -1,19 +1,18 @@
 package at.htl.reederei.model.Employee;
 
+import at.htl.reederei.model.Cruises.CruiseWaiterRole;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Service")
 @Entity
 
 public class Waiter extends AEmployee {
 
-    @ManyToMany
-    @JoinTable
-    private List<CruiseWaiterRole> cruiseWaiterRoles;
+    @Column
+    private CruiseWaiterRole cruiseWaiterRoles;
 }

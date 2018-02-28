@@ -1,27 +1,24 @@
-package at.htl.reederei.model;
+package at.htl.reederei.model.Cruises;
 
+import at.htl.reederei.model.AEntity;
+import at.htl.reederei.model.Ships.Ship;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name  = "Kreuzfahrt")
 public class Cruise extends AEntity {
 
-  /*  @EmbeddedId
     @NotNull
-    @Min(3)
-    private List<CruisePartialRoute> cruisePartialRoutes;*/
-
-    @Column(nullable = false)
+    @Max(20)
+    @Column(length = 20, nullable = false)
     private String name;
 
     @Column

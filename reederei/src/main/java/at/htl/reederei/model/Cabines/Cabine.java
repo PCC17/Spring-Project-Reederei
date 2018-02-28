@@ -1,5 +1,7 @@
-package at.htl.reederei.model;
+package at.htl.reederei.model.Cabines;
 
+import at.htl.reederei.model.AEntity;
+import at.htl.reederei.model.Enum.ECabineSize;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +10,10 @@ import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Kabine")
 @Entity
 
-public class Cabine extends AEntity{
+public class Cabine extends AEntity {
 
     @Column
     @NotNull

@@ -1,5 +1,6 @@
-package at.htl.reederei.model;
+package at.htl.reederei.model.Ships;
 
+import at.htl.reederei.model.Enum.EMovement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import java.util.Date;
 
 @Getter
 @Setter
-@Table
+@Table(name = "Schiff_Hafen")
 @Entity
 @NoArgsConstructor
 public class ShipHarbour implements Serializable {
